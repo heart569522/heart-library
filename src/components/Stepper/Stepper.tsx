@@ -17,7 +17,7 @@ type Props = {
   renderIcon?: (stepId: string, state: StepState) => React.ReactNode;
 };
 
-export function Stepper({
+function Stepper({
   steps,
   activeIndex,
   direction = "horizontal",
@@ -109,3 +109,6 @@ export function Stepper({
     </div>
   );
 }
+
+export { Stepper };
+export default Stepper;
