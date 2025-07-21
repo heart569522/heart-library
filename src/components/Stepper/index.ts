@@ -1,1 +1,3 @@
-export { default as Stepper } from "./Stepper.js";
+// src/components/Stepper/index.ts
+export { Stepper } from "./Stepper";
+export type { Step, StepState } from "./Stepper";

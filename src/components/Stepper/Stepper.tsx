@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "../../utils/index.js";
+import cn from "../../utils/cn";
 
 
 export type Step = {
@@ -17,7 +17,7 @@ type Props = {
   renderIcon?: (stepId: string, state: StepState) => React.ReactNode;
 };
 
-export default function Stepper({
+export function Stepper({
   steps,
   activeIndex,
   direction = "horizontal",

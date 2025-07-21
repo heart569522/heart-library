@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
+    "moduleResolution": "bundler",
     "target": "ESNext",
     "resolveJsonModule": true,
-    "module": "NodeNext",
+    "module": "esnext",
     "declaration": true,
     "declarationDir": "dist",
     "outDir": "dist",
