@@ -1,5 +1,5 @@
-import { cn } from "../../utils/cn";
 import React from "react";
+import { cn } from "../../utils/index.js";
 
 
 export type Step = {
@@ -27,7 +27,14 @@ export default function Stepper({
   const isVertical = direction === "vertical";
 
   const resolveState = (id: string, idx: number): StepState => {
-    return getStepState?.(id, idx) ?? (idx < activeIndex ? "completed" : idx === activeIndex ? "active" : "inactive");
+    return (
+      getStepState?.(id, idx) ??
+      (idx < activeIndex
+        ? "completed"
+        : idx === activeIndex
+          ? "active"
+          : "inactive")
+    );
   };
 
   return (
@@ -86,9 +93,7 @@ export default function Stepper({
             {idx < steps.length - 1 && (
               <div
                 className={cn(
-                  isVertical
-                    ? `w-0.5 h-20 -my-5`
-                    : `h-0.5 flex-1 -mx-8`,
+                  isVertical ? `w-0.5 h-20 -my-5` : `h-0.5 flex-1 -mx-8`,
                   {
                     "bg-zinc-200": nextState === "inactive",
                     "bg-primary": nextState === "completed",
