@@ -1,8 +1,12 @@
 import "./index.css";
 
-// 2) re-export component และ types
-export { Stepper } from "./components/Stepper";
+import Stepper from "./components/Stepper";
+
+// re-export component both as default and named
+export default Stepper;
+export { Stepper };
 export type { Step, StepState } from "./components/Stepper";
 
-// 3) re-export utility อื่นๆ (เช่น cn)
+// re-export utility (e.g. cn)
 export { cn } from "./utils";
+
